@@ -16,7 +16,6 @@
       padding-bottom: 4px;
     }
     #myTabs{
-      height: 188px;
       margin-bottom: 48px;
     }
     #myTabs #myTab li{
@@ -43,6 +42,8 @@
       background-color: #FFF;
       padding: 15px;
       font-size: 13px;
+      height: 188px;
+      overflow: hidden;
     }
     #myTabContent li{
       list-style-type: lower-roman;
