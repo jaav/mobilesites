@@ -5,28 +5,46 @@
   <meta charset="utf-8">
   <style type="text/css">
   	.main{
-  		background: url(nexus_300.png) no-repeat;
-  		width:640px;
-  		height: 600px;
+  		background: url(nexus_340.png) no-repeat;
+  		width:720px;
+  		height: 670px;
+  	}
+  	.background{
+  		position: absolute;
+		top: 8px;
+		left: 330px;
   	}
 	iframe.original{
 		position: absolute;
-		top: 56px;
-		left: 26px;
+		top: 62px;
+		left: 29px;
 		border: 1px solid #000;
+		max-width: 100%;
+		display: block;
 	}
 	iframe.responsive{
 		position: absolute;
-		top: 56px;
-		left: 361px;
+		top: 62px;
+		left: 389px;
 		border: 1px solid #000;
+		max-width: 100%;
+		display: block;
+	}
+	.scroll-wrapper {
+	  	overflow-y: scroll;
+	  	width: 100%;
+		height: 400px;
+		display: inline-block;
 	}
   </style>
 </head>
 <body>
 	<div class="main">
-		<iframe src="frame/index.html" width="263px" height="468px" scrolling="no" frameborder="0" class="original"></iframe>
-		<iframe src="http://www.foratom.org/" width="263px" height="468px" scrolling="no" frameborder="0" class="responsive"></iframe>
+		<div class="scroll-wrapper">
+			<iframe src="frame/index.html" width="313px" height="532px" frameborder="0" class="original"></iframe>
+		</div>
+		<iframe src="http://www.foratom.org/" width="299px" height="532px" frameborder="0" class="responsive"></iframe>
 	</div>
+	<div class="background"><img src="center_340.png"></div>
 </body>
 </html>
