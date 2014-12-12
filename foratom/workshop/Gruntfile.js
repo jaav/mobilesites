@@ -25,14 +25,9 @@ module.exports = function (grunt) {
     less: {
       development: {
         files: {
-          '../css/zeb.css': 'assets/styles/zeb.less',
+          '../frame/css/style.css': 'assets/styles/style.less',
         },
-      },
-      production: {
-        files: {
-          '../css/zeb.css': 'assets/styles/zeb.less',
-        },
-      },
+      }
     },
     uglify: {
       options: {
@@ -49,7 +44,7 @@ module.exports = function (grunt) {
           'bower_components/bootstrap/dist/js/bootstrap.js',
           'assets/scripts/*.js',
         ],
-        tasks: ['concat:js', 'uglify:js'], // tasks to run
+        // tasks: ['concat:js', 'uglify:js'], // tasks to run
         options: {
           livereload: true, // reload the browser
         },

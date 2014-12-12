@@ -56,14 +56,20 @@ $(document).ready(function () {
             $(selected).removeClass('slide-active');
         }
 
-
     });
 
     $('.navbar-nav li a').on('click', function(e){
+        if(e && e.target && e.target.title && e.target.title.toLowerCase() == "home"){
+            console.log('home clicked');
+            return;
+        }
         $(document.body).append('<div class="alert alert-danger not-implemented-alert hide-custom-alert" role="alert" data-dismiss="alert"> <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>      <span class="sr-only">Error:</span><span id="custom-alert-message">This site is underconstruction so most menu items are not active yet</span></div>');
-        console.log(e.target.title);
         if(e && e.target && e.target.title){
             console.log(e.target.title);
+            if(e.target.title.toLowerCase() == "home"){
+                console.log('home clicked');
+                return;
+            }
             $('#custom-alert-message').text(e.target.title);
             
         }else{

@@ -367,7 +367,7 @@
 
     .not-implemented-alert{
       z-index:2000;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%,-50%);
