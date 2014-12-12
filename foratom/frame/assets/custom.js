@@ -59,7 +59,46 @@ $(document).ready(function () {
 
     });
 
+    $('.navbar-nav li a').on('click', function(e){
+        $(document.body).append('<div class="alert alert-danger not-implemented-alert hide-custom-alert" role="alert" data-dismiss="alert"> <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>      <span class="sr-only">Error:</span><span id="custom-alert-message">This site is underconstruction so most menu items are not active yet</span></div>');
+        console.log(e.target.title);
+        if(e && e.target && e.target.title){
+            console.log(e.target.title);
+            $('#custom-alert-message').text(e.target.title);
+            
+        }else{
+            console.log('title not set.');
+        }
+    });
 
+    var addReadmore = function(){
+        setTimeout(function(){
+            $('#myTabContent').css('height','auto');
+            // adding read more to tabs
+            $('#mission').readmore({
+                // heightMargin: 160
+              // speed: 75,
+              // height: 150
+            });
+        },500);
+    };
 
-
+    var destroyReadmore = function(){
+        $('#myTabContent').css('height','188px');
+        $('#mission').readmore('destroy');
+    };
+    
+    $('#vision-tab').on('click', function(e){
+        console.log('vision clicked');
+        destroyReadmore();
+    });
+    $('#position-tab').on('click', function(e){
+        console.log('position clicked');
+        destroyReadmore();
+    });
+    $('#mission-tab').on('click', function(e){
+        console.log('mission clicked');
+        addReadmore();
+    });
+    addReadmore();
 });

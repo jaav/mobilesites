@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/custom.css" rel="stylesheet">
 
@@ -25,7 +25,15 @@
 </head>
 
   <body>
-
+    <!-- <div class="alert alert-danger not-implemented-alert hide-custom-alert" role="alert" data-dismiss="alert">
+      <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+      <span class="sr-only">Error:</span>
+      <span id="custom-alert-message">This site is underconstruction so most menu items are not active yet</span>
+    </div> -->
+    <!-- <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">&times;</span>
+      <span class="sr-only">Close</span>
+    </button> -->
     <div class="navbar navbar navbar-fixed-top" role="navigation" id="slide-nav">
     <div class="container">
      <div class="navbar-header">
@@ -46,11 +54,11 @@
         </form>
        
       <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about" >Organisation</a></li>
-          <li><a href="#contact">Membership</a></li>
-          <li><a href="#contact">Facts&amp;Figures</a></li>
-          <li><a href="#contact">EU Policy</a></li>
+          <li class="active"><a title="Home" href="#">Home</a></li>
+          <li><a title="Organisation" href="#about" >Organisation</a></li>
+          <li><a title="Membership" href="#contact">Membership</a></li>
+          <li><a title="Fact and Figures" href="#contact">Facts&amp;Figures</a></li>
+          <li><a title="EU Policy" href="#contact">EU Policy</a></li>
           <li><a href="#contact">Extranet</a></li> 
       </ul>
             
@@ -90,12 +98,12 @@
 <div id="myTabs">    
 <ul id="myTab" class="nav nav-tabs">
    <li class="active">
-      <a href="#mission" data-toggle="tab">
+      <a href="#mission" data-toggle="tab" id="mission-tab">
          Mision
       </a>
    </li>
-   <li><a href="#vision" data-toggle="tab">Vision</a></li>
-   <li><a href="#position" data-toggle="tab">Papers</a></li>
+   <li><a href="#vision" data-toggle="tab" id="vision-tab">Vision</a></li>
+   <li><a href="#position" data-toggle="tab" id="position-tab">Papers</a></li>
 </ul>
 <div id="myTabContent" class="tab-content">
    <div class="tab-pane fade in active" id="mission">
@@ -167,7 +175,6 @@
           L'EPR est-il vraiment un fiasco industriel ?</a>
           </h5>               </li>
               </ul>
-
     </div>
   </div>
 </div>
@@ -201,7 +208,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/jquery.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/readmore.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="assets/custom.js"></script>
     <script>
       !function ($) {
