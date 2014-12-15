@@ -285,7 +285,24 @@
 
     .carousel .item {
       height: 150px;
+      background-size: cover;
     }
+
+    .carousel .item1 {
+      background: url(../images/img1.png) no-repeat left center; 
+      
+    }
+
+    .carousel .item2 {
+      background: url(../images/img2.JPG) no-repeat left center; 
+      background-size: cover;
+    }
+
+    .carousel .item3 {
+      background: url(../images/img3.JPG) no-repeat left center; 
+      background-size: cover;
+    }
+    
     .carousel img {
       position: absolute;
       top: 0;
@@ -374,6 +391,9 @@
       -moz-transform: translate(-50%,-50%);
       -o-transform: translate(-50%,-50%);
       transform: translate(-50%,-50%);
+      color: #B8B817;
+      background-color: #fff;
+      border-color: #fff;
     }
 
     /* RESPONSIVE CSS
@@ -432,3 +452,43 @@
 
     }
     
+
+    /*Modified By Vintesh*/
+    .quote-image-inline {
+      margin: 4px 4px 0px 0px; float: left;
+    }
+    .daily-press-inline {
+      direction: ltr; text-align: left ! important
+    }
+    .p-inline-for-daily-press-body {
+       text-align:left
+    }
+    .electricity-generation-link{ 
+      font-size:20px;line-height:22px;
+    }
+    .nuclear-industry-link{
+      font-size:22px;line-height:24px;
+    }
+    .electricity-mix {
+      font-size:19px;line-height:21px;
+    }
+    .nuclear-share {
+      font-size:17px;line-height:19px;
+    }
+    .low-carbon {
+      font-size:16px;line-height:18px;
+    }
+    .sustainability{
+      font-size:14px;line-height:16px;
+    }
+    .compeititveness{
+      font-size:13px;line-height:15px;
+    }
+    .security-energy {
+      font-size:11px;line-height:13px;
+    }
+    .european-energy {
+      font-size:10px;line-height:12px;
+    }
+
+    /*===================*/

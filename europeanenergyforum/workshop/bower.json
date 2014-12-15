@@ -1,0 +1,19 @@
+{
+  "name": "mobilesite",
+  "version": "0.1.0",
+  "homepage": "",
+  "authors": [
+    "Jef Waumans <jef@virtualsushi.be"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}

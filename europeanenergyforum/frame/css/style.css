@@ -1,11 +1,6 @@
-/* some general purpose mixins */
 /* variables */
-/*
-Place custom styles here. These styles should loaded after
-bootstrap, so they may override it's behavior.
-*/
 /* GLOBAL STYLES
-    -------------------------------------------------- */
+	-------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 body {
   padding-bottom: 40px;
@@ -16,13 +11,9 @@ ul {
   text-align: left;
   padding-left: 4px;
 }
-li {
+ul li {
   list-style: none;
   padding-bottom: 4px;
-}
-li.newsfeed-item {
-  list-style: inherit;
-  margin-left: 20px;
 }
 #myTabs {
   margin-bottom: 48px;
@@ -30,22 +21,22 @@ li.newsfeed-item {
 #myTabs #myTab li {
   padding-bottom: 0;
 }
-.nav-tabs {
+#myTabs .nav-tabs {
   border-bottom: 1px solid #2570BB;
 }
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
+#myTabs .nav-tabs > li.active > a,
+#myTabs .nav-tabs > li.active > a:hover,
+#myTabs .nav-tabs > li.active > a:focus {
   color: #FFF;
   background-color: #2570BB;
   border: 1px solid #2570BB;
 }
-.nav-tabs > li > a,
-.nav-tabs > li > a:hover,
-.nav-tabs > li > a:focus {
+#myTabs .nav-tabs > li > a,
+#myTabs .nav-tabs > li > a:hover,
+#myTabs .nav-tabs > li > a:focus {
   border-color: #2570BB #2570BB #D6E5F3;
 }
-#myTabContent {
+#myTabs #myTabContent {
   padding: 0 4px;
   border: 1px solid #2570BB;
   border-bottom-left-radius: 4px;
@@ -56,7 +47,7 @@ li.newsfeed-item {
   /*height: 240px;*/
   overflow: hidden;
 }
-#myTabContent li {
+#myTabs #myTabContent li {
   list-style-type: lower-roman;
   margin-left: 20px;
 }
@@ -71,20 +62,14 @@ li.newsfeed-item {
 .panel-default > .panel-heading > .panel-title {
   text-align: center;
 }
-.panel-body {
+.panel-default .panel-body {
   font-size: 13px;
 }
-.panel-body h4 {
+.panel-default .panel-body h4 {
   font-size: 14px;
 }
-.panel-body h5 {
+.panel-default .panel-body h5 {
   font-size: 13px;
-}
-.ruler > hr {
-  height: 0px;
-  background-color: #D6E5F3;
-  border: 1px dashed #2570BB;
-  margin: 30px 0;
 }
 footer {
   position: relative;
@@ -97,9 +82,10 @@ footer .top {
 }
 footer .info {
   margin-top: 16px;
+  font-size: 12px;
 }
 /* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
+	-------------------------------------------------- */
 body.slide-active {
   overflow-x: hidden;
 }
@@ -107,22 +93,17 @@ body.slide-active {
 .no-margin-top {
   margin-top: 0px !important;
 }
-/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
-#page-content {
-  position: relative;
-  padding-top: 70px;
-  left: 0;
-}
 #page-content.slide-active {
   padding-top: 0;
 }
 #slide-nav {
   margin-bottom: 1px;
+  /* put toggle bars on the left :: not using button */
+  /* un fix the navbar when active so that all the menu items are accessible */
 }
-#slide-nav .navbar {
-  background-color: #D6E5F3;
+#slide-nav .navbar-header {
+  position: relative;
 }
-/* put toggle bars on the left :: not using button */
 #slide-nav .navbar-toggle {
   cursor: pointer;
   position: relative;
@@ -134,32 +115,29 @@ body.slide-active {
   width: 40px;
   height: 36px;
   padding: 5px;
-  border: 1px solid #2570BB;
+  border: 1px solid #FFF;
 }
-#slide-nav .navbar-brand {
-  height: auto;
-  width: 74%;
-}
-#slide-nav .navbar-brand img {
-  width: 100%;
-  margin-top: -8px;
-}
-/* icon bar prettyup - optional */
 #slide-nav .navbar-toggle > .icon-bar {
   width: 100%;
   display: block;
   height: 3px;
   margin: 3px 0 5px 0;
-  background-color: #2570bb;
+  background-color: #ffffff;
+}
+#slide-nav .navbar-brand {
+  height: auto;
+  width: 74%;
+  padding: 2px;
+  margin-right: 5%;
+}
+#slide-nav .navbar-brand img {
+  width: 100%;
+  margin-top: -8px;
 }
 #slide-nav .navbar-toggle.slide-active .icon-bar {
   background: #ffa500;
 }
-.navbar-header {
-  position: relative;
-}
-/* un fix the navbar when active so that all the menu items are accessible */
-.navbar.navbar-fixed-top.slide-active {
+#slide-nav .navbar.navbar-fixed-top.slide-active {
   position: relative;
 }
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
@@ -172,6 +150,7 @@ body.slide-active {
   #slide-nav .navbar-header {
     margin: 0 auto;
     padding: 0 15px;
+    background-color: #285b92;
   }
   #slide-nav .navbar.slide-active {
     position: absolute;
@@ -205,7 +184,7 @@ body.slide-active {
   }
   #slide-nav #slidemenu ul.nav li a:hover,
   #slide-nav #slidemenu ul.nav li.active a {
-    background-color: #d6e5f3;
+    background-color: #D6E5F3;
     color: #102748;
   }
   #slide-nav #slidemenu .navbar-nav {
@@ -257,7 +236,7 @@ body.slide-active {
   }
 }
 /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------------- */
+	-------------------------------------------------- */
 /* Carousel base class */
 .carousel {
   margin-bottom: 10px;
@@ -275,18 +254,6 @@ body.slide-active {
 }
 .carousel .item {
   height: 150px;
-  background-size: cover;
-}
-.carousel .item1 {
-  background: url(../images/img1.png) no-repeat left center;
-}
-.carousel .item2 {
-  background: url(../images/img2.JPG) no-repeat left center;
-  background-size: cover;
-}
-.carousel .item3 {
-  background: url(../images/img3.JPG) no-repeat left center;
-  background-size: cover;
 }
 .carousel img {
   position: absolute;
@@ -314,7 +281,7 @@ body.slide-active {
   margin-top: 10px;
 }
 /* MARKETING CONTENT
-    -------------------------------------------------- */
+	-------------------------------------------------- */
 /* Center align the text within the three columns below the carousel */
 .marketing {
   font-size: 14px;
@@ -331,7 +298,7 @@ body.slide-active {
   margin-right: 10px;
 }
 /* Featurettes
-    ------------------------- */
+	------------------------- */
 .featurette-divider {
   margin: 80px 0;
   /* Space out the Bootstrap <hr> more */
@@ -373,8 +340,56 @@ body.slide-active {
   background-color: #fff;
   border-color: #fff;
 }
+.active-members-container .image-container {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  text-align: center;
+}
+img.member-image {
+  padding-bottom: 5px;
+}
+.associate-members-container .image-container {
+  width: 33.33%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  text-align: center;
+  height: 70px;
+}
+.associate-members-container img {
+  width: 75%;
+  vertical-align: middle;
+  margin-top: 50%;
+  -webkit-transform: translateY(-50%);
+}
+.event-date {
+  clear: both;
+  color: #888888;
+  display: block;
+  float: left;
+  font-size: 10px;
+  margin-right: 5px;
+  width: 22%;
+}
+.event-title {
+  display: block;
+  float: left;
+  line-height: 15px;
+  width: 75%;
+  margin-bottom: 10px;
+}
+a.link {
+  color: #F07A08;
+  text-decoration: underline;
+  font-size: 11px;
+  margin-top: 5px;
+}
 /* RESPONSIVE CSS
-    -------------------------------------------------- */
+	-------------------------------------------------- */
 @media (max-width: 767px) {
   .navbar-inner {
     margin: -20px;
