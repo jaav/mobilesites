@@ -1,0 +1,433 @@
+/* variables */
+/* GLOBAL STYLES
+	-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body {
+  padding-bottom: 40px;
+  color: #2570bb;
+  background-color: #d6e5f3;
+}
+ul {
+  text-align: left;
+  padding-left: 4px;
+}
+ul li {
+  list-style: none;
+  padding-bottom: 4px;
+}
+#myTabs {
+  margin-bottom: 48px;
+}
+#myTabs #myTab li {
+  padding-bottom: 0;
+}
+#myTabs .nav-tabs {
+  border-bottom: 1px solid #2570BB;
+}
+#myTabs .nav-tabs > li.active > a,
+#myTabs .nav-tabs > li.active > a:hover,
+#myTabs .nav-tabs > li.active > a:focus {
+  color: #FFF;
+  background-color: #2570BB;
+  border: 1px solid #2570BB;
+}
+#myTabs .nav-tabs > li > a,
+#myTabs .nav-tabs > li > a:hover,
+#myTabs .nav-tabs > li > a:focus {
+  border-color: #2570BB #2570BB #D6E5F3;
+}
+#myTabs #myTabContent {
+  padding: 0 4px;
+  border: 1px solid #2570BB;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #FFF;
+  padding: 15px;
+  font-size: 13px;
+  /*height: 240px;*/
+  overflow: hidden;
+}
+#myTabs #myTabContent li {
+  list-style-type: lower-roman;
+  margin-left: 20px;
+}
+.panel-default {
+  border-color: #2570BB;
+}
+.panel-default > .panel-heading {
+  color: #FFF;
+  background-color: #2570BB;
+  border-color: #2570BB;
+}
+.panel-default > .panel-heading > .panel-title {
+  text-align: center;
+}
+.panel-default .panel-body {
+  font-size: 13px;
+}
+.panel-default .panel-body h4 {
+  font-size: 14px;
+}
+.panel-default .panel-body h5 {
+  font-size: 13px;
+}
+footer {
+  position: relative;
+  margin-top: 60px;
+}
+footer .top {
+  position: absolute;
+  right: 4px;
+  top: -36px;
+}
+footer .info {
+  margin-top: 16px;
+  font-size: 12px;
+}
+/* CUSTOMIZE THE NAVBAR
+	-------------------------------------------------- */
+body.slide-active {
+  overflow-x: hidden;
+}
+/*first child of #page-content so it doesn't shift around*/
+.no-margin-top {
+  margin-top: 0px !important;
+}
+#page-content.slide-active {
+  padding-top: 0;
+}
+#slide-nav {
+  margin-bottom: 1px;
+  /* put toggle bars on the left :: not using button */
+  /* un fix the navbar when active so that all the menu items are accessible */
+}
+#slide-nav .navbar-header {
+  position: relative;
+}
+#slide-nav .navbar-toggle {
+  cursor: pointer;
+  position: relative;
+  line-height: 0;
+  float: left;
+  margin: 6px 0 0 -12px;
+  border: 0;
+  background: transparent;
+  width: 40px;
+  height: 36px;
+  padding: 5px;
+  border: 1px solid #FFF;
+}
+#slide-nav .navbar-toggle > .icon-bar {
+  width: 100%;
+  display: block;
+  height: 3px;
+  margin: 3px 0 5px 0;
+  background-color: #ffffff;
+}
+#slide-nav .navbar-brand {
+  height: auto;
+  width: 74%;
+  padding: 2px;
+  margin-right: 5%;
+}
+#slide-nav .navbar-brand img {
+  width: 100%;
+  margin-top: -8px;
+}
+#slide-nav .navbar-toggle.slide-active .icon-bar {
+  background: #ffa500;
+}
+#slide-nav .navbar.navbar-fixed-top.slide-active {
+  position: relative;
+}
+/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+@media (max-width: 767px) {
+  #slide-nav .container {
+    margin: 0!important;
+    padding: 0!important;
+    height: 100%;
+  }
+  #slide-nav .navbar-header {
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: #285b92;
+  }
+  #slide-nav .navbar.slide-active {
+    position: absolute;
+    width: 70%;
+    top: -1px;
+    z-index: 1000;
+  }
+  #slide-nav #slidemenu {
+    background-color: rgba(16, 39, 72, 0.9);
+    left: -100%;
+    width: 70%;
+    min-width: 0;
+    position: absolute;
+    padding-left: 0;
+    z-index: 2;
+    top: -8px;
+    margin: 0;
+    min-height: 800px;
+  }
+  #slide-nav #slidemenu ul.nav li a {
+    color: #d6e5f3;
+  }
+  #slide-nav #slidemenu ul.nav li {
+    border-bottom: 1px solid #d6e5f3;
+  }
+  #slide-nav #slidemenu ul.nav li:hover,
+  #slide-nav #slidemenu ul.nav li.active {
+    border-bottom: 1px solid #102748;
+    background-color: #d6e5f3;
+    color: #102748;
+  }
+  #slide-nav #slidemenu ul.nav li a:hover,
+  #slide-nav #slidemenu ul.nav li.active a {
+    background-color: #D6E5F3;
+    color: #102748;
+  }
+  #slide-nav #slidemenu .navbar-nav {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+  }
+  #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+    min-width: 0;
+    width: 70%;
+    white-space: normal;
+  }
+  #slide-nav {
+    border-top: 0;
+  }
+  /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+  #navbar-height-col {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    bottom: 0;
+    width: 70%;
+    left: -70%;
+    background: #f7f7f7;
+  }
+  #slide-nav .navbar-form {
+    width: 100%;
+    margin: 8px 0;
+    text-align: center;
+    overflow: hidden;
+    /*fast clearfixer*/
+  }
+  #slide-nav .navbar-form .form-control {
+    text-align: center;
+  }
+  #slide-nav .navbar-form .btn {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  #page-content {
+    left: 0 !important;
+  }
+  .navbar.navbar-fixed-top.slide-active {
+    position: fixed;
+  }
+  .navbar-header {
+    left: 0 !important;
+  }
+}
+/* CUSTOMIZE THE CAROUSEL
+	-------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+  margin-bottom: 10px;
+}
+.carousel .container {
+  position: relative;
+}
+.carousel-control {
+  height: 80px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+  border: 0;
+}
+.carousel .item {
+  height: 150px;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 10px 20px;
+  margin-top: 200px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+  margin: 0;
+  line-height: 1;
+  color: #102748;
+  text-shadow: none;
+  font-weight: 800;
+}
+.carousel-caption .btn {
+  margin-top: 10px;
+}
+/* MARKETING CONTENT
+	-------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+.marketing {
+  font-size: 14px;
+}
+.marketing .span4 {
+  text-align: center;
+}
+.marketing h2 {
+  font-size: 26px;
+  font-weight: normal;
+}
+.marketing .span4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* Featurettes
+	------------------------- */
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+  padding-top: 120px;
+  /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden;
+  /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+  margin-top: -120px;
+  /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.not-implemented-alert {
+  z-index: 2000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #B8B817;
+  background-color: #fff;
+  border-color: #fff;
+}
+.active-members-container .image-container {
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  text-align: center;
+}
+img.member-image {
+  padding-bottom: 5px;
+}
+.associate-members-container .image-container {
+  width: 33.33%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  text-align: center;
+  height: 70px;
+}
+.associate-members-container img {
+  width: 75%;
+  vertical-align: middle;
+  margin-top: 50%;
+  -webkit-transform: translateY(-50%);
+}
+.event-date {
+  clear: both;
+  color: #888888;
+  display: block;
+  float: left;
+  font-size: 10px;
+  margin-right: 5px;
+  width: 22%;
+}
+.event-title {
+  display: block;
+  float: left;
+  line-height: 15px;
+  width: 75%;
+  margin-bottom: 10px;
+}
+a.link {
+  color: #F07A08;
+  text-decoration: underline;
+  font-size: 11px;
+  margin-top: 5px;
+}
+/* RESPONSIVE CSS
+	-------------------------------------------------- */
+@media (max-width: 767px) {
+  .navbar-inner {
+    margin: -20px;
+  }
+  .carousel {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .carousel .item {
+    height: 150px;
+  }
+  .carousel img {
+    height: 150px;
+  }
+  .carousel-caption {
+    width: 78%;
+    margin-top: 96px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .carousel-caption h1 {
+    font-size: 30px;
+  }
+  .carousel-caption .lead,
+  .carousel-caption .btn {
+    font-size: 16px;
+    text-align: center;
+  }
+  .marketing .span4 + .span4 {
+    margin-top: 40px;
+  }
+  .featurette-heading {
+    font-size: 30px;
+  }
+  .featurette .lead {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}

@@ -10,9 +10,9 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/bootstrap-responsive.css" rel="stylesheet">
-    <link href="assets/custom.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -25,7 +25,6 @@
 </head>
 
   <body>
-
     <div class="navbar navbar navbar-fixed-top" role="navigation" id="slide-nav">
     <div class="container">
      <div class="navbar-header">
@@ -35,7 +34,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
        </a>
-      <a class="navbar-brand" href="#"><img src="assets/logo.png"></a>
+      <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
      </div>
      <div id="slidemenu">
        
@@ -46,11 +45,11 @@
         </form>
        
       <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about" >Organisation</a></li>
-          <li><a href="#contact">Membership</a></li>
-          <li><a href="#contact">Facts&amp;Figures</a></li>
-          <li><a href="#contact">EU Policy</a></li>
+          <li class="active"><a title="Home" href="#">Home</a></li>
+          <li><a title="Organisation" href="#about" >Organisation</a></li>
+          <li><a title="Membership" href="#contact">Membership</a></li>
+          <li><a title="Fact and Figures" href="#contact">Facts&amp;Figures</a></li>
+          <li><a title="EU Policy" href="#contact">EU Policy</a></li>
           <li><a href="#contact">Extranet</a></li> 
       </ul>
             
@@ -61,21 +60,21 @@
     ================================================== -->
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
-        <div class="item" style="background: url(assets/img3.JPG) no-repeat left center; background-size: cover;">
+        <div class="item item3">
           <div class="container">
             <div class="carousel-caption">
               <p class="lead">Voice of the European nuclear industry.</p>
             </div>
           </div>
         </div>
-        <div class="item" style="background: url(assets/img1.png) no-repeat left center; background-size: cover;">
+        <div class="item item1">
           <div class="container">
             <div class="carousel-caption">
               <p class="lead">The respected and credible voice.</p>
             </div>
           </div>
         </div>
-        <div class="item active" style="background: url(assets/img2.jpg) no-repeat left center; background-size: cover;">
+        <div class="item active item2">
           <div class="container">
             <div class="carousel-caption">
               <p class="lead">A bridge to European policy-makers.</p>
@@ -90,12 +89,12 @@
 <div id="myTabs">    
 <ul id="myTab" class="nav nav-tabs">
    <li class="active">
-      <a href="#mission" data-toggle="tab">
+      <a href="#mission" data-toggle="tab" id="mission-tab">
          Mision
       </a>
    </li>
-   <li><a href="#vision" data-toggle="tab">Vision</a></li>
-   <li><a href="#position" data-toggle="tab">Papers</a></li>
+   <li><a href="#vision" data-toggle="tab" id="vision-tab">Vision</a></li>
+   <li><a href="#position" data-toggle="tab" id="position-tab">Papers</a></li>
 </ul>
 <div id="myTabContent" class="tab-content">
    <div class="tab-pane fade in active" id="mission">
@@ -136,7 +135,7 @@
   </div>
   <div class="panel-body">
     <p>
-      <img style="margin: 4px 4px 0px 0px; float: left;" class="border-box" alt="Pavol Pavlis" src="assets/head.jpg" height="77" width="60">
+      <img class="border-box quote-image-inline" alt="Pavol Pavlis" src="images/head.jpg" height="77" width="60">
       "Nuclear energy is a stable energy commodity enjoying features of long-term sustainability and safety also with respect to the current geopolitical...
     </p>
   </div>
@@ -147,7 +146,7 @@
     <h3 class="panel-title">Daily Press Clipings</h3>
   </div>
   <div class="panel-body">
-    <div style="direction: ltr; text-align: left ! important" class="feed">
+    <div class="feed daily-press-inline">
   
         <h4>
           <a href="http://www.scoop.it/t/dayly-press-clippings-on-nuclear-energy" target="_blank">
@@ -159,15 +158,14 @@
               <li class="newsfeed-item">
                   <h5 class="feed-link">
         <a href="http://www.scoop.it/t/dayly-press-clippings-on-nuclear-energy/p/4032524190/2014/11/27/juncker-s-300bn-investment-package-and-energy-implications/original" target="_blank">
-          Juncker's €300bn investment package and energy implications</a>
+          IAEA Reviews Nuclear Security in Belgium</a>
           </h5>               </li>
                 <li class="newsfeed-item">
                   <h5 class="feed-link">
         <a href="http://www.scoop.it/t/dayly-press-clippings-on-nuclear-energy/p/4032511266/2014/11/27/l-epr-est-il-vraiment-un-fiasco-industriel/original" target="_blank">
-          L'EPR est-il vraiment un fiasco industriel ?</a>
+          Nuclear projects earmarked in new EU Investment Plan for growth and innovation</a>
           </h5>               </li>
               </ul>
-
     </div>
   </div>
 </div>
@@ -177,7 +175,7 @@
     <h3 class="panel-title">Word Cloud</h3>
   </div>
   <div class="panel-body">
-    <p style="text-align:left">
+    <p class="p-inline-for-daily-press-body">
   
 
 
@@ -196,13 +194,13 @@
 
 
 
-
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/jquery.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="assets/custom.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="lib/readmore.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="js/custom.min.js"></script>
     <script>
       !function ($) {
         $(function(){
@@ -211,7 +209,7 @@
         })
       }(window.jQuery)
     </script>
-    <script src="assets/holder.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/holder/2.4.1/holder.js"></script>
   
 
 </body></html>
