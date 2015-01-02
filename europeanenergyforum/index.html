@@ -3,29 +3,52 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
+  <title>714 X 744</title>
   <style type="text/css">
+  	body{
+	  font-family: 'Dosis', Arial, serif;
+	}
+  	.titles{
+  		position: relative;
+  		font-size: 36px;
+  		font-weight: bold;
+  		margin-bottom: 12px;
+  	}
+  	.titles .before{
+  		margin-left: 116px;
+  	}
+  	.titles .after{
+  		margin-left: 276px;
+  	}
   	.main{
+  		position: relative;
   		background: url(nexus_340.png) no-repeat;
   		width:720px;
   		height: 670px;
+  		overflow: hidden;
   	}
   	.background{
   		position: absolute;
-		top: 8px;
-		left: 330px;
+		top: 0px;
+		left: 322px;
   	}
-	iframe.original{
+  	.background-right{
+  		position: absolute;
+		top: 0px;
+		right: -23px;
+  	}
+	iframe.responsive{
 		position: absolute;
-		top: 62px;
-		left: 29px;
+		top: 54px;
+		left: 21px;
 		border: 1px solid #000;
 		max-width: 100%;
 		display: block;
 	}
-	iframe.responsive{
+	iframe.original{
 		position: absolute;
-		top: 62px;
-		left: 389px;
+		top: 54px;
+		left: 382px;
 		border: 1px solid #000;
 		max-width: 100%;
 		display: block;
@@ -37,14 +60,18 @@
 		display: inline-block;
 	}
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.0.29/webfont.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:600,800">
 </head>
 <body>
+	<div class="titles"><span class="before">Before</span><span class="after">After</span></div>
 	<div class="main">
+		<iframe src="http://www.europeanenergyforum.eu/" width="314px" height="532px" frameborder="0" class="responsive"></iframe>
 		<div class="scroll-wrapper">
 			<iframe src="frame/index.html" width="313px" height="532px" frameborder="0" class="original"></iframe>
 		</div>
-		<iframe src="http://www.europeanenergyforum.eu/" width="299px" height="532px" frameborder="0" class="responsive"></iframe>
+		<div class="background"><img src="center_340.png"></div>
+		<div class="background-right"><img src="center_340.png"></div>
 	</div>
-	<div class="background"><img src="center_340.png"></div>
 </body>
 </html>
